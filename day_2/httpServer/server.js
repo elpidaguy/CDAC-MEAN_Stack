@@ -2,12 +2,12 @@ var http = require("http");
 var url = require("url");
 var fs = require("fs");
 
-var onCreateServer = function (req, res) {
+var onCreateServer = (req, res) => {
     var path = url.parse(req.url).pathname;
 
     fs.readFile(path.substr(1), (err, data) => {
         if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/html' })
+            res.writeHead(404, { 'Content-Type': 'text/html' });
         }
         else {
             res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -18,6 +18,5 @@ var onCreateServer = function (req, res) {
 
 }
 
-var server = http.createServer(onCreateServer);
-server.listen(8081);
+http.createServer(onCreateServer).listen(8081);
 console.log("Http server is listening at: http://localhost:8081/");
