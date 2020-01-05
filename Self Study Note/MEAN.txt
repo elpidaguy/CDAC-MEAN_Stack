@@ -1,0 +1,81 @@
+MEAN Stack - is
+Full Stack Application -> Front end web appn - middle ware apis - backend web appn - DB
+-----------------------------------------------------------------------------------------
+
+v8 js engine - chrome web browser
+Linux Foundation --> v8  --> encapsulated --> Node js
+
+M - MongoDB/MySQL - DB
+E - Express JS - Web Application - Middleware API (alternative:- JAVA SPRING, .NET, Python, Ruby, Spark)
+A - Angular - Front End Application
+N - Node JS - Provides Runtime for Web Developement - Backend
+
+-----------------------------------------------------------------------------------------
+NODE JS
+
+Node JS -> javascript - cross platform runtime provider
+Javascript Libs which can be run on Node js === node modules
+Repository of all node modules === npm(node package manager)
+For installing node modules in local env == npm install <module_name>
+
+------------------------------------------------------------------------------------------
+consume node modules in - 
+
+Server Side Application - Express JS (npm i express)
+
+1.Get request from client - http
+2.excecute BL
+3.Fetch data from DB - mysql node module (npm i mysql)
+4.Send approp response - 1.text/html(kinda mvc)  2.application/json(RESTFull API)
+
+--------------------------------------------------------------------------------------------
+
+consume node module in -
+
+Client Side Application - 
+1.Angular JS 1.x Library - pure javascript
+2.Angular Framwork (npm i @angular/cli) - typescript
+
+1.presentation logic - (form validations, single page application, animations and effects and branding)
+2.client side function handling
+3.send approp request to server - http
+4.receive and render approp response - application/json
+
+----------------------------------------------------------------------------------------------
+
+Database Layer - 
+
+MongoDB or MySQL
+
+execute db fun in express(node) - 
+mongodb - (npm i mongoose)
+mysql - (npm i mysql)
+
+---------------------------------------------------------------------------------------------------
+
+Typescript - Object Oriented(ES6) Wrapper of/for Javascript
+
+ES - ECMAScript - Javascript
+
+ES6 - JavaScript6, TypeScript, NativeScript
+
+.ts - js based language which supports oop functionalities like class, interface, inheritence
+
+internally, .ts are converted to approp browser specific .js files by view engine compiler
+
+.ts file supports most of syntax of c# and Java
+
+Used By - Angular 2.x, React JS, Vue JS
+
+-------------------------------------------------------------------------------------------------------
+
+Using React JS with MEAN --
+
+Front End layer of MEAN based on Angular can be replaced with different js based Front End Libraries like:
+
+MERN - React js
+
+MEVN - Vue js
+
+Note: All other working remains same
+-------------------------------------------------------------------------------------------------------
