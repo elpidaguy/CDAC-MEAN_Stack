@@ -1,0 +1,22 @@
+<section>
+    <div class="container m-5 p-5">
+
+        <H2>Users List </H2>
+
+        <table class="table table-sm table-bordered table-hover">
+            <thead class="bg-danger text-white">
+                <tr>
+                    <th>#</th>
+                    <th>User Id</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{user.UserID}}</td>
+                    <td>{{user.UserName}}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
