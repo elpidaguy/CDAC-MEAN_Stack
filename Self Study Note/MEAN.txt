@@ -57,25 +57,18 @@ Typescript - Object Oriented(ES6) Wrapper of/for Javascript
 
 ES - ECMAScript - Javascript
 
-ES6 - JavaScript6, TypeScript, NativeScript
+-----------------------------------------------------------------------------------------------------
 
-.ts - js based language which supports oop functionalities like class, interface, inheritence
+MEAN Stack Links -->
 
-internally, .ts are converted to approp browser specific .js files by view engine compiler
+https://www.w3schools.com/angular/default.asp
 
-.ts file supports most of syntax of c# and Java
+https://www.w3schools.com/jquery/default.asp
 
-Used By - Angular 2.x, React JS, Vue JS
+https://www.w3schools.com/nodejs/default.asp
 
--------------------------------------------------------------------------------------------------------
+https://angular.io/
 
-Using React JS with MEAN --
+https://web.dev/angular/
 
-Front End layer of MEAN based on Angular can be replaced with different js based Front End Libraries like:
-
-MERN - React js
-
-MEVN - Vue js
-
-Note: All other working remains same
--------------------------------------------------------------------------------------------------------
+https://expressjs.com/
