@@ -1,0 +1,150 @@
+<section *ngIf="!_isLoggedIn && !_isplagCheck">
+
+  <div class="container p-4 text-center">
+    <div class="card">
+      <div class="card-header bg-warning text-white">
+        <h2>Login</h2>
+
+      </div>
+
+    <div class="card-body bg-primary text-white">
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="username">Username:</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" [(ngModel)]="username" class="form-control" placeholder="Enter username" id="username">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="pwd">Password:</label>
+        </div>
+        <div class="col-md-6">
+          <input type="password" [(ngModel)]="password" class="form-control" placeholder="Enter password" id="pwd">
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger btn-xl" (click)="onSubmit()">Submit</button>
+  </div>
+  <div *ngIf="_isError" class="card-footer bg-danger">
+    <div class="alert alert-danger">
+      <strong>Error!</strong> {{loginError}}
+    </div>
+  </div>
+</div>
+
+</div>
+
+</section>
+
+<section *ngIf="_isLoggedIn && !_isplagCheck">
+  <div class="container p-4 text-center">
+    <div class="card">
+      <div class="card-header bg-warning text-white">
+        <h2>Add new Book</h2>
+
+      </div>
+
+    <div class="card-body bg-primary text-white">
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="username">Book Id: </label>
+        </div>
+        <div class="col-md-6">
+         <h2> <span class="badge badge-danger">{{bookId}}</span> </h2>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="pwd">Book Title:</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" [(ngModel)]="bookTitle" class="form-control" id="bookTitle">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-3">
+          <label for="pwd">Book Content:</label>
+        </div>
+        <div class="col-md-6">
+          <textarea [(ngModel)]="content" class="form-control" id="content"></textarea>
+        </div>
+      </div>
+      <div class="p-2 m-2">
+        <button type="button" class="btn btn-success btn-xl m-2" (click)="addNewBook()">Add</button>
+        <button type="button" class="btn btn-warning btn-xl m-2" (click)="resetForm()">Reset</button>
+      </div>
+      
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="p-4">
+      <button class="btn btn-danger" (click)="checkPlagiarism()">Check Plagiarism</button>
+    </div>
+  </div>
+  <table class="table table-bordered">
+    <thead class="bg-primary text-white">
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{book.bookId}}</td>
+        <td>{{book.bookTitle}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</section>
+
+<section *ngIf="_isplagCheck">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Plagiarism Result: </h1>
+    </div>
+
+    <div>
+      <h3>For Words : </h3>
+      <table class="table table-bordered">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th>Token</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of plagWords">
+            <td>{{p.token}}</td>
+            <td>{{p.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<hr>
+    <div>
+      <h3>For Sentence: </h3>
+      <table class="table table-bordered">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th>Token</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of plagSentence">
+            <td>{{p.token}}</td>
+            <!-- <td>{{p.token == '' ? "Others" : p.token}}</td> -->
+            <td>{{p.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
