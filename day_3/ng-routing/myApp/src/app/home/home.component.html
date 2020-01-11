@@ -19,36 +19,18 @@
                 <table class="table table-bordered table-hover">
                     <thead class="text-white">
                         <tr>
-                            <th>id</th>
-                            <th>name</th>
-                            <th>contact</th>
+                            <th>User Id</th>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Body</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white">
-                        <tr>
-                            <td>1</td>
-                            <td>kaustubh</td>
-                            <td>8989898989</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>kaustubh</td>
-                            <td>8989898989</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>kaustubh</td>
-                            <td>8989898989</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>kaustubh</td>
-                            <td>8989898989</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>kaustubh</td>
-                            <td>8989898989</td>
+                        <tr *ngFor="let i of userList">
+                            <td>{{i.userId}}</td>
+                            <td>{{i.id}}</td>
+                            <td>{{i.title}}</td>
+                            <td>{{i.body}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -62,7 +44,8 @@
 <div class="col-md-5">
         <div class="card">
             <div class="card-header bg-danger">
-                <h3>Login</h3>
+                <h3> <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    Login</h3>
             </div>
             <div class=" card-body text-center">
                 <form>
