@@ -1,0 +1,57 @@
+<section>
+    <div class="container mt-4">
+        <div class="card" style="width: 60%;">
+            <div class="card-header bg-danger text-white">
+                <h3>Register</h3>
+            </div>
+
+            <div class="card-body text-center">
+                    <div class="p-1">
+                        <input type="text" class="form-control form-control-sm" [(ngModel)]="firstName" placeholder="Enter First Name">
+                    </div>
+
+                    <div class="p-1">
+                        <input type="text" class="form-control form-control-sm" [(ngModel)]="lastName" placeholder="Enter Last Name">
+                    </div>
+
+                    <div class="p-1">
+                        <input type="text" class="form-control form-control-sm" [(ngModel)]="username" placeholder="Enter Username">
+                    </div>
+
+                    <div class="p-1">
+                        <input type="password" class="form-control form-control-sm" [(ngModel)]="password" placeholder="Enter Password">
+                    </div>
+
+                    <div class="p-1">
+                        <button type="submit" class="btn btn-block btn-success m-1" (click)="onRegister()"> Register </button>
+                        <a type="button" class="btn btn-block btn-primary m-1" [routerLink]="['/']" > Login </a>
+                    </div>
+            </div>
+            <div class="card-footer" *ngIf="_isSubmitted">
+                <div class="alert alert-info">Registered Successfully</div>
+            </div>
+        </div>
+
+        <div *ngIf="_isSubmitted">
+            <hr>
+            <h3 class="text-white">Total Entries: </h3>
+            <table class="table table-bordered table-hover">
+                <thead class="text-white">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr *ngFor="let i of students">
+                        <td>{{i.firstName}}</td>
+                        <td>{{i.lastName}}</td>
+                        <td>{{i.username}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    </section>

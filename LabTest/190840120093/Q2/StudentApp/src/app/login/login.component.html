@@ -1,0 +1,35 @@
+<section>
+    <div class="container mt-4">
+        <div class="card" style="width: 60%;">
+            <div class="card-header bg-danger text-white">
+                <h3>Login</h3>
+            </div>
+
+            <div class="card-body text-center">
+                    <div class="p-1">
+                        <input type="text" class="form-control form-control-sm" [(ngModel)]="username" placeholder="enter username">
+                    </div>
+
+                    <div class="p-1">
+                        <input type="password" class="form-control form-control-sm" [(ngModel)]="password" placeholder="enter password">
+                    </div>
+
+                    <div class="p-1">
+                        <button type="submit" class="btn btn-block btn-success m-1" (click)="onLogin()"> Submit </button>
+                        <a type="button" class="btn btn-block btn-primary m-1" [routerLink]="['/register']" > Register </a>
+                    </div>
+            </div>
+
+            <div class="card-footer" *ngIf="!_isSubmitted">
+                <div class="alert alert-danger">Please enter Valid Username/Password</div>
+            </div>
+            <div class="card-footer" *ngIf="_isSubmitted">
+                <div class="alert alert-success">Login Successfull!</div>
+                <div>
+                    Login Successfull for :
+                    {{user.firstName}} {{user.lastName}}
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
